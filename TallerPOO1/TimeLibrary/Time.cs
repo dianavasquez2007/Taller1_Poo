@@ -37,7 +37,9 @@
             _milliseconds = milliseconds;
         }
 
-        // --- Métodos ---
+        
+
+
         public override string ToString()
         {
             DateTime dt = new DateTime(1, 1, 1, _hours, _minutes, _seconds, _milliseconds);
@@ -70,7 +72,7 @@
         {
             long totalMs = this.ToMilliseconds() + other.ToMilliseconds();
             long oneDayMs = 24L * 60 * 60 * 1000;
-            totalMs %= oneDayMs; // Si pasa al otro día, reinicia
+            totalMs %= oneDayMs; 
 
             int hours = (int)(totalMs / 3600000); totalMs %= 3600000;
             int mimutes = (int)(totalMs / 60000); totalMs %= 60000;
